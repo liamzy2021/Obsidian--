@@ -380,7 +380,7 @@ class DashboardView extends ItemView {
     }
 
     getViewType() { return VIEW_TYPE; }
-    getDisplayText() { return '主页'; }
+    getDisplayText() { return 'Modular Theme Dashboard'; }
     getIcon() { return 'layout-dashboard'; }
 
     async onOpen() {
@@ -503,7 +503,7 @@ class DashboardView extends ItemView {
 
         const left = header.createDiv({ cls: 'v15-header-left' });
         left.createEl('span', { text: '🏠', cls: 'v15-header-icon' });
-        left.createEl('span', { text: '主页', cls: 'v15-header-title' });
+        left.createEl('span', { text: 'Modular Theme Dashboard', cls: 'v15-header-title' });
 
         const right = header.createDiv({ cls: 'v15-header-right' });
 
@@ -891,7 +891,7 @@ class DashboardSettingTab extends PluginSettingTab {
         const { containerEl } = this;
         containerEl.empty();
 
-        containerEl.createEl('h2', { text: '主页仪表盘 V15 设置' });
+        containerEl.createEl('h2', { text: 'Modular Theme Dashboard V15 设置' });
 
         this._renderAppearanceSettings(containerEl);
         this._renderModuleToggles(containerEl);
@@ -1168,11 +1168,11 @@ class DashboardPlugin extends Plugin {
 
         this.registerView(VIEW_TYPE, (leaf) => new DashboardView(leaf, this));
 
-        this.addRibbonIcon('layout-dashboard', '主页仪表盘', () => this.activateView());
+        this.addRibbonIcon('layout-dashboard', 'Modular Theme Dashboard', () => this.activateView());
 
         this.addCommand({
             id: 'open-dashboard',
-            name: '打开主页仪表盘',
+            name: 'Open Modular Theme Dashboard',
             callback: () => this.activateView()
         });
 

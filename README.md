@@ -1,6 +1,4 @@
-# Obsidian插件-模块化仪表盘主页（自由拖拽，自由组合）
-Obsidian插件-模块化仪表盘主页（自由拖拽，自由组合）
-# 主页 - Obsidian Dashboard Plugin
+# Modular Theme Dashboard - Obsidian Dashboard Plugin
 
 > 一款功能丰富的 Obsidian 仪表盘插件，提供自由拖拽布局、10 个功能模块、8 款精美主题，以及无限实例化能力。
 
@@ -8,10 +6,33 @@ Obsidian插件-模块化仪表盘主页（自由拖拽，自由组合）
 
 ## Preview
 
-
-[<img width="2199" height="1360" alt="image" src="https://github.com/user-attachments/assets/9255bbe6-96c3-465b-8921-2b82c755aa51" />](https://private-user-images.githubusercontent.com/88437884/601281614-09b4854a-7281-4c7c-bfc0-fdd7336e0230.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODAzNjU0MjgsIm5iZiI6MTc4MDM2NTEyOCwicGF0aCI6Ii84ODQzNzg4NC82MDEyODE2MTQtMDliNDg1NGEtNzI4MS00YzdjLWJmYzAtZmRkNzMzNmUwMjMwLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjA2MDIlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwNjAyVDAxNTIwOFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWZjZmQ0MDBkNDRhZTE4MzFmNGZkZTFiOWE2M2EwYjA5ZjI3NmU5NWYyNWY2YmNmNzVkODg3NGIyMDNlNzYzMTgmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRnBuZyJ9.QaO_QcPJ9dfJwHiD3nqR3sfiLHqMkEWhLmlNwU31YYE)
-
-
+```
++----------------------------------------------------------+
+|  🏠 Modular Theme Dashboard  [➕ 添加板块] [🎨 主题] [🔄 刷新] [⚙️]  |
++----------------------------------------------------------+
+|                                                          |
+|  +----------+  +----------+  +----------+  +----------+   |
+|  | 🌤️ 天气  |  | 📅 日历  |  | 📈 统计  |  | ✅ 待办  |   |
+|  |          |  |          |  |          |  |          |   |
+|  | 实时天气  |  | 农历日历  |  | 笔记统计  |  | 增删改查  |   |
+|  | 3天预报   |  | 节日节气  |  | 文件排行  |  | 进度追踪  |   |
+|  +----------+  +----------+  +----------+  +----------+   |
+|                                                          |
+|  +----------+  +----------+  +----------+  +----------+   |
+|  | 🕐 最近  |  | 🔥 资讯  |  | 📂 目录  |  | 💡 AI   |   |
+|  |          |  |          |  |          |  |          |   |
+|  | 最近修改  |  | 热点新闻  |  | 树形目录  |  | AI 洞察  |   |
+|  | 点击打开  |  | 分页浏览  |  | 快速导航  |  | 智能分析  |   |
+|  +----------+  +----------+  +----------+  +----------+   |
+|                                                          |
+|  +-------------------+  +-------------------+            |
+|  | 🌐 网页预览       |  | 📺 网页视频       |            |
+|  |                   |  |                   |            |
+|  | 内嵌网页浏览器    |  | 内嵌视频播放器    |            |
+|  | 缩放 / 平移 / 刷新|  | 缩放 / 平移 / 刷新|            |
+|  +-------------------+  +-------------------+            |
++----------------------------------------------------------+
+```
 
 ## Features
 
@@ -124,7 +145,7 @@ Obsidian插件-模块化仪表盘主页（自由拖拽，自由组合）
 
 ### From GitHub (Manual)
 
-1. Go to [Releases](https://github.com/your-repo/ai-dashboard-v15/releases) and download the latest `main.js`, `manifest.json`, `styles.css` and `assets/` folder
+1. Go to [Releases](https://github.com/liamzy2021/Obsidian--Modular-Theme-Dashboard-Free-Drag-and-Drop/releases) and download the latest `main.js`, `manifest.json`, `styles.css` and `assets/` folder
 2. Create a folder named `ai-smart-dashboard-v15` in your Obsidian vault's `.obsidian/plugins/` directory
 3. Copy all downloaded files into this folder, maintaining the structure:
    ```
@@ -147,17 +168,17 @@ Obsidian插件-模块化仪表盘主页（自由拖拽，自由组合）
        └── web-video.js
    ```
 4. Restart Obsidian or reload plugins
-5. Go to Settings → Community Plugins → Enable "主页"
+5. Go to Settings → Community Plugins → Enable "Modular Theme Dashboard"
 
 ### From Obsidian Community Plugins
 
 1. Open Settings → Community Plugins → Browse
-2. Search for "主页" or "Dashboard"
+2. Search for "Modular Theme Dashboard"
 3. Click Install, then Enable
 
 ## Usage
 
-- **打开仪表盘** — 左侧边栏点击 🏠 图标，或通过命令面板搜索 "主页"
+- **打开仪表盘** — 左侧边栏点击 🏠 图标，或通过命令面板搜索 "Modular Theme Dashboard"
 - **拖拽卡片** — 按住卡片标题栏拖拽到目标位置
 - **调整大小** — 拖动卡片右下角调整宽高
 - **添加新实例** — 点击顶部 `➕` 按钮，选择要添加的模块

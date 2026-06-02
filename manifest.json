@@ -1,10 +1,13 @@
 {
   "id": "ai-smart-dashboard-v15",
-  "name": "主页",
+  "name": "Modular Theme Dashboard",
   "version": "15.0.0",
   "minAppVersion": "0.15.0",
-  "description": "主页仪表盘 V15 - 自由拖拽布局 + 完全模块化 + 完整功能迁移",
+  "description": "A modular, free-layout dashboard for Obsidian with 10 widgets, 8 themes, and infinite instancing support.",
   "author": "栗子仁儿",
-  "authorUrl": "",
-  "isDesktopOnly": false
+  "authorUrl": "https://github.com/liamzy2021",
+  "isDesktopOnly": false,
+  "fundingUrl": {
+    "GitHub": "https://github.com/liamzy2021/Obsidian--Modular-Theme-Dashboard-Free-Drag-and-Drop"
+  }
 }
