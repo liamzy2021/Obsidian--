@@ -23,10 +23,10 @@
 
 ### 完全模块化架构
 
-- **热加载模块系统** — `ModuleManager` 动态扫描 `modules/` 目录，自动加载所有 `.js` 模块
+- **内置模块系统** — 10 个功能模块全部内置于 `main.js` 中，安装即用，无需额外文件
 - **标准模块接口** — 每个模块导出 `id / title / icon / defaultSettings / styles / render / renderSettings`
 - **运行时注入** — 通过 `with(_runtimeCtx)` 自动注入 `app / plugin / moment / requestUrl` 等上下文
-- **零耦合** — 新增模块只需在 `modules/` 目录下新建 `.js` 文件，无需修改主代码
+- **零耦合** — 模块间完全独立，互不影响
 
 ### 无限实例化
 
@@ -125,25 +125,14 @@
 
 ### 从 GitHub 手动安装
 
-1. 前往 [Releases](https://github.com/liamzy2021/Obsidian--Modular-Theme-Dashboard-Free-Drag-and-Drop/releases) 下载最新的 `main.js`、`manifest.json`、`styles.css` 和 `modules/` 文件夹
+1. 前往 [Releases](https://github.com/liamzy2021/Obsidian--Modular-Theme-Dashboard-Free-Drag-and-Drop/releases) 下载最新的 `main.js`、`manifest.json` 和 `styles.css`
 2. 在 Obsidian 库的 `.obsidian/plugins/` 目录下创建名为 `modular-theme-dashboard` 的文件夹
-3. 将所有下载的文件复制到该文件夹中，保持结构：
+3. 将下载的 3 个文件复制到该文件夹中：
    ```
    .obsidian/plugins/modular-theme-dashboard/
    ├── main.js
    ├── manifest.json
-   ├── styles.css
-   └── modules/
-       ├── ai-insight.js
-       ├── calendar.js
-       ├── directory.js
-       ├── news.js
-       ├── recent.js
-       ├── stats.js
-       ├── todo.js
-       ├── weather.js
-       ├── web-preview.js
-       └── web-video.js
+   └── styles.css
    ```
 4. 重启 Obsidian 或重新加载插件
 5. 前往 **设置 → 社区插件 → 启用 "Modular Theme Dashboard"**
@@ -243,10 +232,10 @@ MIT
 
 ### Fully Modular Architecture
 
-- **Hot-Load Module System** — `ModuleManager` dynamically scans the `modules/` directory and loads all `.js` modules
+- **Built-in Module System** — All 10 modules are built into `main.js`; install and use immediately, no extra files needed
 - **Standard Module Interface** — Each module exports `id / title / icon / defaultSettings / styles / render / renderSettings`
 - **Runtime Context Injection** — Automatically injects `app / plugin / moment / requestUrl` context via `with(_runtimeCtx)`
-- **Zero Coupling** — To add a new module, simply create a `.js` file in `modules/`; no core code changes needed
+- **Zero Coupling** — Modules are completely independent from each other
 
 ### Unlimited Instancing
 
@@ -345,25 +334,14 @@ Switch themes with one click via the top toolbar, or customize card background c
 
 ### From GitHub (Manual)
 
-1. Go to [Releases](https://github.com/liamzy2021/Obsidian--Modular-Theme-Dashboard-Free-Drag-and-Drop/releases) and download the latest `main.js`, `manifest.json`, `styles.css`, and `modules/` folder
+1. Go to [Releases](https://github.com/liamzy2021/Obsidian--Modular-Theme-Dashboard-Free-Drag-and-Drop/releases) and download the latest `main.js`, `manifest.json`, and `styles.css`
 2. Create a folder named `modular-theme-dashboard` in your Obsidian vault's `.obsidian/plugins/` directory
-3. Copy all downloaded files into this folder, maintaining the structure:
+3. Copy all 3 files into this folder:
    ```
    .obsidian/plugins/modular-theme-dashboard/
    ├── main.js
    ├── manifest.json
-   ├── styles.css
-   └── modules/
-       ├── ai-insight.js
-       ├── calendar.js
-       ├── directory.js
-       ├── news.js
-       ├── recent.js
-       ├── stats.js
-       ├── todo.js
-       ├── weather.js
-       ├── web-preview.js
-       └── web-video.js
+   └── styles.css
    ```
 4. Restart Obsidian or reload plugins
 5. Go to **Settings -> Community Plugins -> Enable "Modular Theme Dashboard"**
@@ -413,26 +391,15 @@ Global settings:
 
 ```
 modular-theme-dashboard/
-├── main.js              # Plugin entry (Plugin + DashboardView + ModuleManager)
+├── main.js              # Plugin entry + all 10 built-in modules (Plugin + DashboardView + ModuleManager)
 ├── manifest.json        # Plugin manifest
 ├── styles.css           # Global styles + base module styles
-├── LICENSE              # MIT License
-└── modules/
-    ├── weather.js       # Weather module (Amap API)
-    ├── calendar.js      # Calendar module (Lunar / Solar Terms / Holidays)
-    ├── stats.js         # Stats module (Note stats / Folder rankings)
-    ├── todo.js          # To-Do module (CRUD + Markdown persistence)
-    ├── recent.js        # Recent Files module
-    ├── news.js          # News module (AI HOT RSS)
-    ├── directory.js     # Directory module (Tree navigation)
-    ├── ai-insight.js    # AI Insight module (OpenAI-compatible API)
-    ├── web-preview.js   # Web Preview module (iframe three-layer zoom)
-    └── web-video.js     # Web Video module (webview three-layer zoom)
+└── LICENSE              # MIT License
 ```
 
 ### Core Design
 
-- **`ModuleManager`** — Dynamically scans the `modules/` directory, injects plugin API context via `new Function()` + `with(_runtimeCtx)`, and executes module code
+- **`ModuleManager`** — Loads built-in modules from memory, injects plugin API context via `new Function()` + `with(_runtimeCtx)`, and executes module code
 - **`DashboardView`** — A free-layout view based on `ItemView`, managing card rendering, drag-and-drop, resizing, and theme switching
 - **Module Interface** — Each module exports a standard interface `{ id, title, icon, defaultSettings, styles, render, renderSettings }`
 - **Instance System** — `settings.instances[]` stores all instance info; `settings.modules[instanceId]` stores per-instance independent configuration
