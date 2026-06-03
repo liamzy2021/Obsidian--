@@ -208,6 +208,13 @@ MIT
 
 **栗子仁儿** · [GitHub](https://github.com/liamzy2021)
 
+---
+
+## 打赏
+
+![打赏](https://img-reg-ab.imagency.cn/e/19467f4b916c082ee6ef3b9d81aa9ecb.png)
+
+如果您觉得这个插件有帮助，欢迎打赏支持！
 
 ---
 
@@ -450,14 +457,3 @@ MIT
 ## Author
 
 **liamzy2021** · [GitHub](https://github.com/liamzy2021)
-
----
----
-
----
-
-## 打赏
-
-![打赏](https://img-reg-ab.imagency.cn/e/19467f4b916c082ee6ef3b9d81aa9ecb.png)
-
-如果您觉得这个插件有帮助，欢迎打赏支持！
