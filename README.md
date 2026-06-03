@@ -461,11 +461,3 @@ MIT
 ![打赏](https://img-reg-ab.imagency.cn/e/19467f4b916c082ee6ef3b9d81aa9ecb.png)
 
 如果您觉得这个插件有帮助，欢迎打赏支持！
-
----
-
-## Donation
-
-![Donation](https://img-reg-ab.imagency.cn/e/19467f4b916c082ee6ef3b9d81aa9ecb.png)
-
-If you find this plugin helpful, feel free to donate!
