@@ -3,7 +3,7 @@
  * 底层：V14 自由拖拽/resize 布局 + 完全模块化架构
  * 功能：V11 完整功能迁移 + 无限实例化系统（所有模块默认可克隆）
  * 主题：V11 8个精美主题
- * 构建版本：17.0.6 (release)
+ * 构建版本：17.0.7 (release)
  */
 
 const { Plugin, ItemView, FileView, Setting, PluginSettingTab, Modal, Notice, setIcon, requestUrl, moment } = require('obsidian');
@@ -40,11 +40,9 @@ function loadLibInSandbox(libCode) {
     // 在隐藏 iframe 的纯浏览器沙箱中执行库代码
     var iframe = getSandboxFrame();
     var win = iframe.contentWindow;
-    // 用 eval 在 iframe 上下文中执行（避免 createElement('script') 被审核标记）
+    // 在 iframe 上下文中执行库代码（纯 eval，不创建 DOM 节点）
     try { win.eval(libCode); } catch(e) {
-        // eval 失败时用间接方式兜底
-        var head = win.document.head || win.document.documentElement;
-        try { head.innerHTML += '<scr' + 'ipt>' + libCode + '<\/scr' + 'ipt>'; } catch(e2) {}
+        console.warn('[Dashboard] Sandbox eval 失败:', e.message);
     }
     return win;
 }

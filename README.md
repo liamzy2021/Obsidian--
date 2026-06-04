@@ -11,7 +11,7 @@
 
 > A feature-rich free-layout dashboard plugin with 25 widgets, 8 beautiful themes, and unlimited module instancing support.
 
-**V17.0.6** — Based on V14's free drag-and-drop layout architecture, now featuring 25 modules with full FileViewer support for 9+ file formats.
+**V17.0.7** — Based on V14's free drag-and-drop layout architecture, now featuring 25 modules with full FileViewer support for 9+ file formats.
 
 ---
 
@@ -230,7 +230,7 @@ If you find this plugin helpful, consider supporting its development:
 
 > 一款功能丰富的自由拖拽仪表盘插件，提供 25 个功能模块、8 款精美主题，以及无限实例化能力。
 
-**V17.0.6** — 基于 V14 自由拖拽布局架构，融合 25 个全量功能模块，并支持 9+ 种文件格式的内置文件查看器。
+**V17.0.7** — 基于 V14 自由拖拽布局架构，融合 25 个全量功能模块，并支持 9+ 种文件格式的内置文件查看器。
 
 ---
 
