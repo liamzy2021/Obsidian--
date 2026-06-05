@@ -9,102 +9,142 @@
 
 # Modular Theme Dashboard
 
-> A feature-rich free-layout dashboard plugin with 25 widgets, 8 beautiful themes, and unlimited module instancing support.
+> A free-layout Obsidian dashboard with 25 widgets, 8 themes, 9+ file viewers, and AI-powered multi-language translation — drag, drop, and make it yours.
 
-**V17.0.7** — Based on V14's free drag-and-drop layout architecture, now featuring 25 modules with full FileViewer support for 9+ file formats.
+**V17.0.8** — Now with **AI Custom Language**: translate the entire interface into any human language or local dialect using your favorite AI model. Japanese, Russian, Cantonese, Sichuanese, Klingon... if your AI can speak it, the dashboard can display it.
 
 ---
 
 ## Preview
 
-<img width="1905" height="1358" alt="Modular Theme Dashboard Preview" src="https://github.com/user-attachments/assets/09b4854a-7281-4c7c-bfc0-fdd7336e0230" />
+<p align="center">
+  <img width="1905" alt="Modular Theme Dashboard Preview" src="https://github.com/user-attachments/assets/09b4854a-7281-4c7c-bfc0-fdd7336e0230" />
+  <br/><em>🏠 Modular Theme Dashboard — full overview</em>
+</p>
+
+
+
+<p align="center">
+  <img width="926" alt="Language Settings" src="https://github.com/user-attachments/assets/63b0583e-8eb0-4eba-8eb1-bebf52e01780" />
+  <br/><em>🌍 AI-powered language translation — translate the UI into any language</em>
+</p>
+
+<p align="center">
+  <img width="838" alt="Theme Gallery" src="https://github.com/user-attachments/assets/a5e14c51-569c-4d0d-8d40-a0dcaae00b92" />
+  <br/><em>🎨 8 beautiful themes, one click to switch</em>
+</p>
+
+<p align="center">
+  <img width="1677" alt="Full Feature Showcase" src="https://github.com/user-attachments/assets/91cd02b7-5500-4069-8353-8e1e976ee24c" />
+  <br/><em>📊 25 modules covering weather, calendar, news, AI analysis, and more</em>
+</p>
 
 ---
 
 ## Features
 
-### Free Drag-and-Drop Layout
+### 🌍 AI Custom Language (New in V17.0.8)
 
-- **Absolute Position Canvas** — Module cards use `position: absolute` and can be placed anywhere on the canvas
-- **Drag to Move** — Hold the card title bar to drag and move cards in real time
-- **Resize Freely** — Each card supports `resize: both`; drag the bottom-right corner to adjust dimensions
-- **Persistent Layout** — All card positions and sizes are auto-saved to `data.json` and persist across restarts
+> **Your AI. Your language. Your dashboard.**
 
-### Fully Modular Architecture
+Tired of English-only plugins? Want to read your dashboard in Japanese, Russian, or even a local dialect like Sichuanese? This is for you.
 
-- **25 Built-in Modules** — All modules built into the plugin, install and use immediately
-- **Standard Module Interface** — Each module exports `id / title / icon / defaultSettings / styles / render / renderSettings`
-- **Runtime Context Injection** — Automatically injects `app / plugin / moment / requestUrl` context
-- **Zero Coupling** — Modules are completely independent; enable/disable individually
+**How it works:** Enter your OpenAI-compatible API key, type the target language (e.g., `日本語`, `Русский`, `四川话`, `Klingon`), hit translate — the AI converts all 500+ UI strings in under a minute. Preview the result, apply it, and your dashboard instantly speaks your language.
 
-### Unlimited Instancing
+| Feature | Detail |
+|---------|--------|
+| 🗣️ **Any language** | Japanese, Korean, Russian, French, German, Spanish, Arabic, Hindi, Thai, Vietnamese... |
+| 🏠 **Local dialects** | Cantonese (广东话), Sichuanese (四川话), Hokkien (闽南语), Shanghainese (上海话), Hakka (客家话), Teochew (潮汕话)... |
+| 🚀 **Any AI** | OpenAI, DeepSeek, Moonshot, or any OpenAI-compatible API |
+| 💾 **Persistent** | Translations are saved and survive restarts — switch languages anytime from the dropdown |
+| 🔁 **Reusable** | Once translated, the language appears in your language selector with a ⚡ badge |
 
-- **Clone Any Module** — Create new instances of any module via the `+` button
-- **Independent Config** — Each instance has its own settings, cache, and session
-- **Instance ID Format** — `module#N` (e.g., `weather#1`, `web-preview#2`)
+**Quick Start:** Settings → Language → AI Custom → enter target language → Translate → Preview → Apply
 
-### Built-in FileViewer (9+ Formats)
+### 🧩 Free Drag-and-Drop Layout
 
-- **Spreadsheets** — `.xlsx`, `.xls`, `.csv` — full table rendering with SheetJS
-- **Word Documents** — `.docx` (mammoth.js), `.doc` (docstream / CFB)
-- **HTML / Text / Code** — `.html`, `.txt`, `.json`, `.js`, etc.
-- **Images & Video** — `.png`, `.jpg`, `.gif`, `.webp`, `.mp4`, `.webm`
-- **Toggle per Format** — Enable/disable each format in Settings
-- **System Fallback** — Disabled formats auto-open with system default app
+- **Absolute Positioning Canvas** — Every module card lives exactly where you place it
+- **Drag to Move** — Grab the title bar and drag anywhere in real time
+- **Resize Freely** — Pull the bottom-right corner to set the perfect size
+- **Persistent** — All positions and sizes are auto-saved; nothing shifts after a restart
 
-### Core Modules
+### 📦 25 Built-in Modules
 
-| Module | Description |
-|--------|------------|
-| Weather | Real-time weather + 3-day forecast via Amap API |
-| Calendar | Full lunar calendar with solar terms, holidays, and monthly navigation |
-| Stats | Note count, word count, folder count, average words, Top 5 folders |
+All modules are built in — no extra downloads, no dependencies to chase. Install and use immediately.
+
+| Module | What It Does |
+|--------|-------------|
+| Weather | Real-time weather + 3-day forecast (Amap API) |
+| Calendar | Lunar calendar with solar terms, holidays, monthly navigation |
+| Stats | Note count, word count, folder stats, Top 5 folders |
 | To-Do | Full CRUD with filters, progress tracking, Markdown persistence |
 | Recent Files | Recently modified notes with relative timestamps |
-| News | Real-time trending news via AI HOT RSS with categories & pagination |
-| Directory | Tree-style folder structure with expand/collapse and file counts |
-| AI Insight | AI-powered note analysis via OpenAI-compatible API with daily cache |
-| Web Preview | Embedded browser with URL bar, zoom/pan controls, full sandbox |
-| Web Video | Embedded video player via Electron webview with independent sessions |
-| Image Gallery | Browse images in grid or masonry layout with lightbox preview |
-| Media Gallery | Unified media browser for images, video, and audio files |
-| Vault Stats | Comprehensive vault statistics with visual charts |
+| News | Trending headlines via AI HOT RSS, with categories & pagination |
+| Directory | Tree-style folder browser with expand/collapse |
+| AI Insight | AI-powered note analysis with daily cache |
+| Web Preview | Embedded browser with URL bar, zoom, and sandbox |
+| Web Video | Embedded video player via Electron webview |
+| Image Gallery | Grid / masonry image browser with lightbox |
+| Media Gallery | Unified browser for images, video, and audio |
+| Vault Stats | Comprehensive statistics with visual charts |
 | Code Editor | Built-in code editor with syntax highlighting |
-| Data Editor | Edit and manage structured data (JSON, YAML, CSV) directly |
-| Spreadsheet | Full spreadsheet editing with cell formatting |
-| Doc Viewer | Rich document preview for various formats |
-| HTML Viewer | Render HTML files directly within the dashboard |
-| URL Opener | Quick-launch URLs and bookmarks from the dashboard |
+| Data Editor | Edit JSON, YAML, CSV directly in the dashboard |
+| Spreadsheet | Full spreadsheet with cell formatting |
+| Doc Viewer | Rich preview for Word, HTML, and more |
+| HTML Viewer | Render HTML files inline |
+| URL Opener | Quick-launch bookmarks and URLs |
 | XHS Importer | Import content from Xiaohongshu (RED) |
-| Excel to Markdown | Convert clipboard Excel tables to Markdown format |
+| Excel to Markdown | Paste clipboard tables as Markdown |
 
-### Utility Modules (Global Features)
+### 🔧 Utility Modules
 
 | Module | Description |
 |--------|------------|
-| Folder Counter | Show file counts next to folder names in the file explorer |
-| Image Tools | 18 right-click operations: format conversion, resize, rotate, flip, align, compress |
-| Table Resize | Drag to resize table column widths in reading view |
+| Folder Counter | Show file counts next to folder names in the explorer |
+| Image Tools | 18 right-click operations: crop, resize, rotate, compress, and more |
+| Table Resize | Drag to resize table columns in reading view |
 | Auto-Play Loop | Automatic media playback loop engine |
 
-### 8 Beautiful Themes
+### 🔄 Unlimited Instancing
 
-| Theme | Name | Style |
-|-------|------|-------|
-| Dawn | 晨曦 | Warm orange tones, gentle and soft |
-| Sabi | 侘寂 | Soft green-grey, Japanese minimalism |
-| Dusk | 暮光 | Deep blue-purple, elegant dark |
-| Coastal | 海岸 | Cyan-green, fresh and natural |
-| Harvest | 丰收 | Golden-brown, autumn harvest |
-| Ink | 墨迹 | Deep grey-cool, ink-like composure |
-| Linen | 亚麻 | Beige linen, understated warmth |
-| Carbon | 碳灰 | Pure black background, tech feel |
+- **Clone Anything** — Create multiple instances of any module via the `+` button
+- **Independent Config** — Each instance has its own settings, cache, and session
+- **Smart IDs** — Instances use `module#N` naming (e.g., `weather#1`, `web-preview#2`)
 
-### Settings Backup
+### 📁 Built-in File Viewer (9+ Formats)
 
-- **Export** — Download all settings as a JSON file (`obsidian-dashboard-settings-YYYY-MM-DD.json`)
-- **Import** — Restore settings from a previously exported file
-- Perfect for migrating settings between vaults or sharing configurations
+Open files directly in the dashboard — no need to leave Obsidian:
+
+| Format | Support |
+|--------|---------|
+| Spreadsheets | `.xlsx`, `.xls`, `.csv` (SheetJS rendering) |
+| Word Documents | `.docx` (mammoth.js), `.doc` (CFB parser) |
+| Code & Text | `.html`, `.txt`, `.json`, `.js`, and more |
+| Images | `.png`, `.jpg`, `.gif`, `.webp` |
+| Video | `.mp4`, `.webm` |
+
+Toggle each format on/off in Settings. Disabled formats fall back to your system default app.
+
+### 🎨 8 Beautiful Themes
+
+| Theme | Style |
+|-------|-------|
+| Dawn (晨曦) | Warm orange, gentle and soft |
+| Sabi (侘寂) | Soft green-grey, Japanese minimalism |
+| Dusk (暮光) | Deep blue-purple, elegant dark |
+| Coastal (海岸) | Cyan-green, fresh and natural |
+| Harvest (丰收) | Golden-brown, autumn warmth |
+| Ink (墨迹) | Deep grey, ink-wash composure |
+| Linen (亚麻) | Beige linen, understated warmth |
+| Carbon (碳灰) | Pure black, modern tech |
+
+Switch themes from the top toolbar, or customize card background color and opacity in Settings.
+
+### 💾 Settings Backup
+
+- **Export** — Save all settings as `obsidian-dashboard-settings-YYYY-MM-DD.json`
+- **Import** — Restore from a previously exported file
+- Great for migrating between vaults or sharing configurations
 
 ---
 
@@ -113,8 +153,8 @@
 ### From GitHub (Manual)
 
 1. Go to [Releases](https://github.com/liamzy2021/Obsidian--Modular-Theme-Dashboard-Free-Drag-and-Drop/releases) and download the latest `main.js`, `manifest.json`, and `styles.css`
-2. Create a folder named `modular-theme-dashboard` in your Obsidian vault's `.obsidian/plugins/` directory
-3. Copy all 3 files into this folder:
+2. Create a folder named `modular-theme-dashboard` in your vault's `.obsidian/plugins/` directory
+3. Copy all 3 files in:
    ```
    .obsidian/plugins/modular-theme-dashboard/
    ├── main.js
@@ -134,12 +174,12 @@
 
 ## Usage
 
-- **Open Dashboard** — Click the 🏠 icon in the left sidebar, or search in the command palette
-- **Drag Cards** — Hold the card title bar to drag to any position
-- **Resize** — Drag the bottom-right corner of a card
-- **Add Instance** — Click the top `+` button and select a module
+- **Open Dashboard** — Click the 🏠 icon in the left sidebar, or use the command palette
+- **Drag Cards** — Hold the title bar to drag cards anywhere
+- **Resize** — Drag the bottom-right corner of any card
+- **Add Module** — Click the `+` button at the top and pick a module
 - **Switch Theme** — Click the `🎨` button in the top toolbar
-- **Settings** — Via the `⚙️` button, or through Obsidian Settings panel
+- **Settings** — Via the `⚙️` button or Obsidian's plugin settings panel
 
 ---
 
@@ -149,45 +189,22 @@
 |--------|-------------|
 | Weather | City, Amap API Key |
 | AI Insight | API URL, API Key, Model, Temperature, Delay |
+| AI Language | API URL, API Key, Model, Target Language |
 | Web Preview | Default URL, Zoom, X/Y Offset |
 | Web Video | Default URL, Zoom, X/Y Offset |
 | To-Do | Storage folder path |
 | Directory | Root directories to display |
-| XHS Importer | Import configuration |
 
-**Global Settings:** Theme selection, card background color + opacity, top bar visibility, module toggles, module ordering, FileViewer format toggles, utility module toggles.
-
----
-
-## Architecture
-
-```
-modular-theme-dashboard/
-├── main.js              # Plugin entry + all 25 built-in modules
-├── manifest.json        # Plugin manifest
-├── styles.css           # Global styles
-├── src/core/            # Core source (00-header, 01-lib-loaders, 02-file-viewer, 03-themes, 04-defaults, 05-module-manager, 06-dashboard-view, 07-settings-tab, 08-plugin)
-├── modules/             # 25 feature modules (dynamic loading in dev mode)
-│   └── file-viewers/    # 9 FileViewer extensions (xlsx, doc, docx, html, image, video, text, legacy-office, utils)
-└── libs/                # Third-party libraries (xlsx.full.min.js, mammoth.browser.min.js)
-```
-
-### Core Design
-
-- **`ModuleManager`** — Loads built-in modules, injects plugin API context, executes module code
-- **`DashboardView`** — Free-layout view based on `ItemView`, managing cards, drag-and-drop, resizing, themes
-- **`DashboardFileViewer`** — Custom `FileView` for rendering 9+ file formats inline
-- **Module Interface** — Standard `{ id, title, icon, defaultSettings, styles, render, renderSettings }`
-- **Instance System** — `settings.instances[]` for layout; `settings.modules[instanceId]` for per-instance config
+**Global Settings:** Theme, card background color & opacity, top bar visibility, module toggles, module ordering, FileViewer format toggles, utility module toggles.
 
 ---
 
 ## Requirements
 
 - Obsidian **0.15.0** or later
-- Desktop app recommended (web preview/video modules require Electron)
-- Weather module requires an [Amap API Key](https://lbs.amap.com/)
-- AI Insight module requires an OpenAI-compatible API endpoint
+- Desktop app recommended (web preview/video modules use Electron)
+- Weather module: [Amap API Key](https://lbs.amap.com/)
+- AI modules: OpenAI-compatible API endpoint
 
 ---
 
@@ -205,12 +222,12 @@ MIT
 
 ## ☕ Support
 
-If you find this plugin helpful, consider supporting its development:
+If you enjoy this plugin, a star on GitHub means the world:
 
 <p align="center">
-  <a href="https://opencollective.com/obsidian--modular-theme-dashboard-free-drag-and-drop" target="_blank" rel="noopener">
-    <img src="https://bootflare.com/wp-content/uploads/2025/12/Opencollective-Logo.png" alt="Open Collective" width="120" /><br/>
-    <img src="https://img.shields.io/badge/☕-Buy_Me_a_Coffee-orange?style=for-the-badge&logo=buy-me-a-coffee" />
+  <a href="https://github.com/liamzy2021/Obsidian--Modular-Theme-Dashboard-Free-Drag-and-Drop" target="_blank" rel="noopener">
+    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" width="120" /><br/>
+    <img src="https://img.shields.io/badge/⭐-Star_on_GitHub-blue?style=for-the-badge&logo=github" />
   </a>
 </p>
 
@@ -228,104 +245,141 @@ If you find this plugin helpful, consider supporting its development:
 
 # 中文说明
 
-> 一款功能丰富的自由拖拽仪表盘插件，提供 25 个功能模块、8 款精美主题，以及无限实例化能力。
+> 一款自由拖拽的 Obsidian 仪表盘插件，内置 25 个功能模块、8 款精美主题、9+ 种文件查看器，以及 AI 驱动的多语言翻译——随心摆放，你的桌面你做主。
 
-**V17.0.7** — 基于 V14 自由拖拽布局架构，融合 25 个全量功能模块，并支持 9+ 种文件格式的内置文件查看器。
+**V17.0.8** — 全新 **AI 自定义语言**功能：用你喜欢的 AI 模型将整个插件界面翻译成任意语言或方言。日语、俄语、粤语、四川话、克林贡语……AI 能说啥，仪表盘就能显示啥。
 
 ---
 
 ## 预览
 
-<img width="1905" height="1358" alt="Modular Theme Dashboard 预览" src="https://github.com/user-attachments/assets/09b4854a-7281-4c7c-bfc0-fdd7336e0230" />
+<p align="center">
+  <img width="1905" alt="Modular Theme Dashboard 全貌" src="https://github.com/user-attachments/assets/09b4854a-7281-4c7c-bfc0-fdd7336e0230" />
+  <br/><em>🏠 Modular Theme Dashboard — 全貌一览</em>
+</p>
+
+<p align="center">
+  <img width="840" alt="仪表盘总览" src="https://github.com/user-attachments/assets/4b54c878-0e85-4c05-81e0-e26187d7cef7" />
+  <br/><em>🌍 AI 驱动多语言翻译，任意语言一键切换</em>
+</p>
+
+
+<p align="center">
+  <img width="838" alt="主题展示" src="https://github.com/user-attachments/assets/a5e14c51-569c-4d0d-8d40-a0dcaae00b92" />
+  <br/><em>🎨 8 款精美主题，一键切换</em>
+</p>
+
+<p align="center">
+  <img width="1677" alt="全功能展示" src="https://github.com/user-attachments/assets/91cd02b7-5500-4069-8353-8e1e976ee24c" />
+  <br/><em>📊 25 个模块覆盖天气、日历、资讯、AI 分析等方方面面</em>
+</p>
 
 ---
 
 ## 功能特性
 
-### 自由拖拽布局
+### 🌍 AI 自定义语言（V17.0.8 全新功能）
 
-- **绝对定位画布** — 模块卡片以 `position: absolute` 自由布局，可放置在画布任意位置
-- **拖拽移动** — 按住卡片标题栏拖拽，实时移动到任意位置
-- **自由缩放** — 每张卡片支持 `resize: both`，拖动右下角调整宽高
-- **布局持久化** — 所有卡片位置、尺寸自动保存到 `data.json`，重启不丢失
+> **你的 AI，你的语言，你的仪表盘。**
 
-### 完全模块化架构
+厌倦了只有英文的插件界面？想把仪表盘变成日文、俄文，甚至是四川话、广东话？这个功能就是为你准备的。
 
-- **25 个内置模块** — 全部内置于插件中，安装即用
-- **标准模块接口** — 每个模块导出 `id / title / icon / defaultSettings / styles / render / renderSettings`
-- **运行时注入** — 自动注入 `app / plugin / moment / requestUrl` 上下文
-- **零耦合** — 模块间完全独立，可单独启用/禁用
+**怎么用：** 填入你的 OpenAI 兼容 API 密钥，输入目标语言（比如 `日本語`、`Русский`、`四川话`、`Klingon`），点击翻译——AI 会在几十秒内翻译完 500+ 条界面文字。预览结果，一键应用，你的仪表盘立刻说你的语言。
 
-### 无限实例化
-
-- **任意模块可克隆** — 点击顶部 `+` 按钮，创建任意模块的新实例
-- **独立配置** — 每个实例拥有独立的设置、缓存、会话
-- **实例 ID 规范** — 格式 `module#N`（如 `weather#1`、`web-preview#2`）
-
-### 内置文件查看器（9+ 种格式）
-
-- **表格文件** — `.xlsx`、`.xls`、`.csv` — 基于 SheetJS 的完整表格渲染
-- **Word 文档** — `.docx`（mammoth.js）、`.doc`（docstream / CFB 解析）
-- **HTML / 文本 / 代码** — `.html`、`.txt`、`.json`、`.js` 等
-- **图片与视频** — `.png`、`.jpg`、`.gif`、`.webp`、`.mp4`、`.webm`
-- **按格式开关** — 在设置中单独启用/禁用每种格式
-- **系统回退** — 禁用的格式自动用系统默认程序打开
-
-### 核心模块
-
-| 模块 | 说明 |
+| 特点 | 详情 |
 |------|------|
-| 天气 | 基于高德 API 的实时天气 + 未来 3 天预报 |
-| 日历 | 农历完整支持，含节气、节日标注、月历翻页 |
-| 笔记统计 | 笔记总数 / 总字数 / 文件夹数 / 平均字数 / Top 5 文件夹 |
-| 待办事项 | 完整增删改查，三种筛选，进度统计，Markdown 持久化 |
-| 最近文件 | 最近修改笔记，智能相对时间显示 |
-| 资讯 | 基于 AI HOT RSS 的实时热点新闻，分类 + 分页 |
-| 目录 | 树形文件夹结构，可展开/折叠，自定义根目录 |
-| AI 洞察 | AI 笔记分析，OpenAI 兼容接口，当天缓存 |
-| 网页预览 | 内嵌浏览器，URL 栏 + 缩放/平移 + 完整沙箱 |
-| 网页视频 | 基于 Electron webview 的内嵌视频播放，独立会话 |
-| 图片画廊 | 网格/瀑布流图片浏览，点击灯箱预览 |
+| 🗣️ **任意语言** | 日语、韩语、俄语、法语、德语、西班牙语、阿拉伯语、印地语、泰语、越南语…… |
+| 🏠 **当地方言** | 广东话、四川话、闽南语、上海话、客家话、潮汕话……只有你想不到 |
+| 🚀 **任意 AI** | OpenAI、DeepSeek、Moonshot，或任何 OpenAI 兼容接口 |
+| 💾 **持久保存** | 翻译结果自动保存，重启不丢失——下次直接从下拉菜单切换 |
+| 🔁 **一次翻译，永久使用** | 翻译过的语言会带 ⚡ 标记出现在语言选择器里，无需重复翻译 |
+
+**快速上手：** 设置 → 语言 → AI 自定义 → 输入目标语言 → 点击翻译 → 预览 → 应用
+
+### 🧩 自由拖拽布局
+
+- **绝对定位画布** — 每个模块卡片精确放置在你想要的位置
+- **拖拽移动** — 按住标题栏，拖到任意位置，实时响应
+- **自由缩放** — 拖动右下角，调到你满意的尺寸
+- **自动保存** — 所有位置和尺寸自动持久化，重启不跑位
+
+### 📦 25 个内置模块
+
+所有模块内置于插件中，无需额外下载，安装即用。
+
+| 模块 | 功能说明 |
+|------|---------|
+| 天气 | 实时天气 + 未来 3 天预报（高德 API） |
+| 日历 | 农历万年历，节气、节日标注，月历翻页 |
+| 笔记统计 | 笔记总数、总字数、文件夹统计、Top 5 文件夹 |
+| 待办事项 | 完整增删改查，三种筛选模式，进度追踪，Markdown 持久化 |
+| 最近文件 | 最近修改笔记列表，智能相对时间显示 |
+| 资讯 | AI HOT RSS 实时热点新闻，分类 + 分页浏览 |
+| 目录 | 树形文件夹结构，可展开折叠，自定义根目录 |
+| AI 洞察 | AI 驱动的笔记智能分析，当天缓存不重复请求 |
+| 网页预览 | 内嵌浏览器，支持 URL 输入、缩放平移、完整沙箱 |
+| 网页视频 | Electron webview 内嵌视频播放，独立会话 |
+| 图片画廊 | 网格 / 瀑布流图片浏览，点击灯箱预览 |
 | 媒体画廊 | 图片、视频、音频统一媒体浏览器 |
-| 笔记统计 | 全面的笔记数据统计与可视化图表 |
+| 仓库统计 | 全面的笔记数据统计与可视化图表 |
 | 代码编辑器 | 内置代码编辑器，支持语法高亮 |
-| 数据编辑器 | 直接在仪表盘中编辑 JSON、YAML、CSV 等结构化数据 |
+| 数据编辑器 | 在仪表盘中直接编辑 JSON、YAML、CSV |
 | 电子表格 | 完整电子表格编辑，支持单元格格式化 |
-| 文档查看器 | 多种格式的富文档预览 |
+| 文档查看器 | Word、HTML 等格式的富文档预览 |
 | HTML 查看器 | 在仪表盘中直接渲染 HTML 文件 |
-| URL 打开器 | 从仪表盘快速启动 URL 和书签 |
+| URL 打开器 | 快速启动书签和 URL |
 | 小红书导入 | 从小红书导入内容 |
-| Excel 转表格 | 将剪贴板中的 Excel 表格转换为 Markdown 格式 |
+| Excel 转表格 | 将剪贴板 Excel 表格一键转为 Markdown |
 
-### 实用模块（全局功能）
+### 🔧 实用模块
 
 | 模块 | 说明 |
 |------|------|
-| 文件夹计数器 | 在文件浏览器中文件夹旁显示文件数量 |
-| 图片处理 | 18 项右键菜单：格式转换、调整大小、旋转、翻转、对齐、压缩 |
+| 文件夹计数器 | 文件浏览器中文件夹旁显示文件数量 |
+| 图片处理 | 18 项右键操作：裁剪、缩放、旋转、翻转、压缩等 |
 | 表格列宽调整 | 阅读模式下拖拽调整表格列宽 |
 | 自动播放循环 | 媒体自动播放循环引擎 |
 
-### 8 款精美主题
+### 🔄 无限实例化
 
-| 主题 | 名称 | 风格 |
-|------|------|------|
-| Dawn | 晨曦 | 暖橙色调，温暖柔和 |
-| Sabi | 侘寂 | 柔和绿灰，日式简约 |
-| Dusk | 暮光 | 深蓝紫调，暗色优雅 |
-| Coastal | 海岸 | 青绿清新，自然舒适 |
-| Harvest | 丰收 | 金棕暖调，秋日丰收 |
-| Ink | 墨迹 | 深灰冷调，墨色沉稳 |
-| Linen | 亚麻 | 米色布纹，低调温暖 |
-| Carbon | 碳灰 | 纯黑背景，科技感 |
+- **任意模块可克隆** — 点击顶部 `+` 按钮，创建任意模块的多个实例
+- **独立配置** — 每个实例拥有独立的设置、缓存和会话
+- **智能命名** — 实例使用 `模块名#编号` 格式（如 `天气#1`、`网页预览#2`）
 
-支持通过顶部工具栏一键切换主题，也可在设置中自定义卡片背景色和透明度。
+### 📁 内置文件查看器（9+ 种格式）
 
-### 设置存档
+直接在仪表盘中打开文件，无需切换窗口：
 
-- **导出** — 将所有设置保存为 JSON 文件（`obsidian-dashboard-settings-YYYY-MM-DD.json`）
-- **导入** — 从之前导出的文件恢复设置
-- 适合在多个仓库间迁移设置或分享配置
+| 格式 | 支持 |
+|------|------|
+| 表格 | `.xlsx`、`.xls`、`.csv`（SheetJS 完整渲染） |
+| Word 文档 | `.docx`（mammoth.js）、`.doc`（CFB 解析） |
+| 代码与文本 | `.html`、`.txt`、`.json`、`.js` 等 |
+| 图片 | `.png`、`.jpg`、`.gif`、`.webp` |
+| 视频 | `.mp4`、`.webm` |
+
+在设置中可按格式开关，禁用的格式自动回退到系统默认程序打开。
+
+### 🎨 8 款精美主题
+
+| 主题 | 风格 |
+|------|------|
+| Dawn（晨曦） | 暖橙色调，温暖柔和 |
+| Sabi（侘寂） | 柔和绿灰，日式简约 |
+| Dusk（暮光） | 深蓝紫调，暗色优雅 |
+| Coastal（海岸） | 青绿清新，自然舒适 |
+| Harvest（丰收） | 金棕暖调，秋日丰收 |
+| Ink（墨迹） | 深灰冷调，墨色沉稳 |
+| Linen（亚麻） | 米色布纹，低调温暖 |
+| Carbon（碳灰） | 纯黑背景，现代科技 |
+
+点击顶部工具栏 `🎨` 按钮一键切换，也可在设置中自定义卡片背景色和透明度。
+
+### 💾 设置存档
+
+- **导出** — 将所有设置保存为 `obsidian-dashboard-settings-YYYY-MM-DD.json`
+- **导入** — 从之前导出的文件一键恢复
+- 适合在多仓库间迁移配置或与朋友分享设置
 
 ---
 
@@ -334,8 +388,8 @@ If you find this plugin helpful, consider supporting its development:
 ### 从 GitHub 手动安装
 
 1. 前往 [Releases](https://github.com/liamzy2021/Obsidian--Modular-Theme-Dashboard-Free-Drag-and-Drop/releases) 下载最新的 `main.js`、`manifest.json` 和 `styles.css`
-2. 在 Obsidian 库的 `.obsidian/plugins/` 目录下创建名为 `modular-theme-dashboard` 的文件夹
-3. 将下载的 3 个文件复制到该文件夹中：
+2. 在 Obsidian 仓库的 `.obsidian/plugins/` 目录下新建 `modular-theme-dashboard` 文件夹
+3. 将 3 个文件复制进去：
    ```
    .obsidian/plugins/modular-theme-dashboard/
    ├── main.js
@@ -343,9 +397,9 @@ If you find this plugin helpful, consider supporting its development:
    └── styles.css
    ```
 4. 重启 Obsidian 或重新加载插件
-5. 前往 **设置 → 社区插件 → 启用 "Modular Theme Dashboard"**
+5. **设置 → 社区插件 → 启用 "Modular Theme Dashboard"**
 
-### 从社区插件安装
+### 从社区插件商店安装
 
 1. 打开 **设置 → 社区插件 → 浏览**
 2. 搜索 "Modular Theme Dashboard"
@@ -356,11 +410,11 @@ If you find this plugin helpful, consider supporting its development:
 ## 使用说明
 
 - **打开仪表盘** — 左侧边栏点击 🏠 图标，或通过命令面板搜索
-- **拖拽卡片** — 按住卡片标题栏拖拽到目标位置
-- **调整大小** — 拖动卡片右下角调整宽高
-- **添加新实例** — 点击顶部 `+` 按钮，选择要添加的模块
-- **切换主题** — 点击顶部 `🎨` 按钮，从 8 款主题中选择
-- **模块设置** — 通过顶部 `⚙️` 按钮，或通过 Obsidian 设置面板
+- **拖拽卡片** — 按住标题栏拖拽到任意位置
+- **调整大小** — 拖动卡片右下角
+- **添加模块** — 点击顶部 `+` 按钮，选择要添加的模块
+- **切换主题** — 点击顶部 `🎨` 按钮
+- **模块设置** — 点击顶部 `⚙️` 按钮，或通过 Obsidian 设置面板
 
 ---
 
@@ -369,46 +423,23 @@ If you find this plugin helpful, consider supporting its development:
 | 模块 | 关键设置 |
 |------|---------|
 | 天气 | 城市、高德 API Key |
-| AI 洞察 | API URL、API Key、模型名称、温度参数、请求延迟 |
-| 网页预览 | 默认 URL、缩放比例、X/Y 偏移 |
-| 网页视频 | 默认 URL、缩放比例、X/Y 偏移 |
+| AI 洞察 | API URL、API Key、模型、温度参数、请求延迟 |
+| AI 语言 | API URL、API Key、模型、目标语言 |
+| 网页预览 | 默认 URL、缩放比例、XY 偏移 |
+| 网页视频 | 默认 URL、缩放比例、XY 偏移 |
 | 待办事项 | 存储文件夹路径 |
 | 目录 | 显示的根目录列表 |
-| 小红书导入 | 导入配置 |
 
-**全局设置：** 主题选择、卡片背景色 + 透明度、顶部栏显示/隐藏、模块开关、模块排序、文件查看器格式开关、实用模块开关。
-
----
-
-## 架构
-
-```
-modular-theme-dashboard/
-├── main.js              # 插件入口 + 全部 25 个内置模块
-├── manifest.json        # 插件清单
-├── styles.css           # 全局样式
-├── src/core/            # 核心源码（00-header, 01-lib-loaders, 02-file-viewer, 03-themes, 04-defaults, 05-module-manager, 06-dashboard-view, 07-settings-tab, 08-plugin）
-├── modules/             # 25 个功能模块（开发模式下动态加载）
-│   └── file-viewers/    # 9 个文件查看器扩展（xlsx, doc, docx, html, image, video, text, legacy-office, utils）
-└── libs/                # 第三方库（xlsx.full.min.js, mammoth.browser.min.js）
-```
-
-### 核心设计
-
-- **`ModuleManager`** — 加载内置模块，注入插件 API 上下文，执行模块代码
-- **`DashboardView`** — 基于 `ItemView` 的自由布局视图，管理卡片、拖拽、缩放、主题
-- **`DashboardFileViewer`** — 自定义 `FileView`，支持 9+ 种文件格式的内联渲染
-- **模块接口** — 标准 `{ id, title, icon, defaultSettings, styles, render, renderSettings }`
-- **实例系统** — `settings.instances[]` 存储布局；`settings.modules[instanceId]` 存储每个实例的独立配置
+**全局设置：** 主题、卡片背景色和透明度、顶栏显示/隐藏、模块开关、模块排序、文件查看器格式开关、实用模块开关。
 
 ---
 
 ## 系统要求
 
 - Obsidian **0.15.0** 或更高版本
-- 推荐桌面端（网页预览/视频模块需要 Electron）
+- 推荐桌面端使用（网页预览/视频模块依赖 Electron）
 - 天气模块需要[高德地图 API Key](https://lbs.amap.com/)
-- AI 洞察模块需要 OpenAI 兼容的 API 接口
+- AI 模块需要 OpenAI 兼容的 API 接口
 
 ---
 
