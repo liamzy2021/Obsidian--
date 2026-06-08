@@ -16,10 +16,6 @@
 body.theme-light {
     --v6-card: rgba(255, 255, 255, 0.92);
 }
-body.theme-dark .v6-card,
-body.theme-dark .v6-canvas {
-    background-color: transparent !important;
-}
 
 /* =====================================================
    仪表盘视图容器
