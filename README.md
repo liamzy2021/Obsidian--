@@ -1,7 +1,7 @@
 <p align="center">
   <a href="#modular-theme-dashboard">English</a> &nbsp;|&nbsp;
   <a href="#中文说明">中文</a> &nbsp;|&nbsp;
-  <a href="#-support"><img src="https://img.shields.io/badge/⭐-Support-brightgreen?style=flat-square" /></a>
+  <a href="#-support"><img src="https://img.shields.io/badge/☕-Support-orange?style=flat-square" /></a>
   <a href="#打赏"><img src="https://img.shields.io/badge/💰-打赏-red?style=flat-square" /></a>
 </p>
 
@@ -307,19 +307,28 @@ MIT
 
 ---
 
-## ⭐ Support
+## ☕ Support
 
-If you enjoy this plugin, give it a star and follow the project:
+If you enjoy this plugin, feel free to support via:
 
-<p align="center">
-  <a href="https://github.com/liamzy2021/Obsidian--Modular-Theme-Dashboard-Free-Drag-and-Drop" target="_blank" rel="noopener">
-    <img src="https://img.shields.io/github/stars/liamzy2021/Obsidian--Modular-Theme-Dashboard-Free-Drag-and-Drop?style=social" alt="GitHub stars" />
-  </a>
-  &nbsp;&nbsp;
-  <a href="https://github.com/liamzy2021" target="_blank" rel="noopener">
-    <img src="https://img.shields.io/badge/⭐-Star_&_Follow-24292f?style=for-the-badge&logo=github" />
-  </a>
-</p>
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" width="240">
+        <a href="https://paypal.me/lilirenzy" target="_blank" rel="noopener">
+          <img src="https://img.shields.io/badge/💳-PayPal-003087?style=for-the-badge&logo=paypal&logoColor=white" />
+        </a>
+        <br/><b>PayPal</b>
+      </td>
+      <td align="center" width="240">
+        <a href="https://ko-fi.com/liamzy" target="_blank" rel="noopener">
+          <img src="https://cdn.ko-fi.com/cdn/kofi3.png?v=3" height="36" alt="Buy Me a Coffee at ko-fi.com" />
+        </a>
+        <br/><b>Ko-fi</b>
+      </td>
+    </tr>
+  </table>
+</div>
 
 ---
 
