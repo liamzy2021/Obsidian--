@@ -1,7 +1,7 @@
 {
 	"id": "modular-theme-dashboard",
 	"name": "Modular Theme Dashboard",
-	"version": "17.1.6",
+	"version": "17.1.7",
 	"minAppVersion": "0.15.0",
 	"description": "A modular, free-layout dashboard plugin with 10 widgets, 8 themes, and infinite instancing support.",
 	"author": "栗子仁儿",

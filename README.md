@@ -104,6 +104,7 @@ All modules are built in — no extra downloads, no dependencies to chase. Insta
 | Image Tools | 18 right-click operations: crop, resize, rotate, compress, and more |
 | Table Resize | Drag to resize table columns in reading view |
 | Auto-Play Loop | Automatic media playback loop engine |
+| Audio Transcribe | Right-click audio/video files to transcribe via Cloud API or Local AI (New in V17.1.7) |
 
 ### 🔄 Unlimited Instancing
 
@@ -146,6 +147,48 @@ Toggle each format on/off in Settings. Disabled formats fall back to your system
 <p align="center">
   <img width="2555" height="1352" alt="Table Viewer Multi-Sheet" src="https://github.com/user-attachments/assets/15db28ab-eebb-4663-8af5-4299739777a7" />
   <br/><em>📑 Switch between sheets with one click — all sheets listed as tabs</em>
+</p>
+
+### 🎙️ Audio / Video Transcription (New in V17.1.7)
+
+> Right-click any audio or video file → Transcribe → text inserted into your note. No dashboard panel needed — just configure and go.
+
+| Feature | Detail |
+|---------|--------|
+| 🎯 **Right-click to Transcribe** | Right-click any `.mp3` / `.m4a` / `.wav` / `.mp4` / `.webm` / `.flac` / `.ogg` file in the file explorer |
+| ☁️ **Cloud API** | Any OpenAI-compatible `/v1/audio/transcriptions` endpoint — fill in your Base URL, API Key, and model name |
+| 🖥️ **Local AI** | faster-whisper-server, LocalAI, docker-whisper — any OpenAI-compatible /v1/audio/transcriptions service |
+| 📝 **5 Output Formats** | Plain text, bullet list, action items, timestamp chapters, speaker diarization |
+| 🌍 **Multi-Language** | All UI text follows the plugin's language setting |
+| 💰 **Free Options** | SiliconFlow (TeleSpeech ASR, free tier), Groq (Whisper, free tier), Cloudflare Workers AI |
+
+**Recommended platforms (all support OpenAI-compatible API):**
+
+*Cloud API:*
+
+| Platform | Base URL | Notes |
+|----------|----------|-------|
+| SiliconFlow | `https://api.siliconflow.cn/v1` | 🇨🇳 China access, free TeleSpeech ASR |
+| Groq | `https://api.groq.com/openai/v1` | Fast, free Whisper tier |
+| Cloudflare Workers AI | `https://api.cloudflare.com/client/v4/accounts/{id}/ai/v1` | Free tier |
+| OpenAI | `https://api.openai.com/v1` | Standard paid API |
+
+*Local AI:*
+
+| Platform | Base URL | Notes |
+|----------|----------|-------|
+| faster-whisper-server | `http://localhost:8000/v1` | Python, fully OpenAI-compatible, recommended |
+| LocalAI | `http://localhost:8080/v1` | Go, multi-backend (whisper/faster-whisper/llama-cpp) |
+| docker-whisper | `http://localhost:9000` | Docker one-click deploy, speaker diarization |
+
+<p align="center">
+  <img width="1105" height="1003" alt="Audio Transcribe Settings" src="https://github.com/user-attachments/assets/10424883-fa9d-4e98-93f6-857066158bbb" />
+  <br/><em>🎙️ Audio Transcribe — cloud API configuration with platform recommendations</em>
+</p>
+
+<p align="center">
+  <img width="442" height="462" alt="Audio Transcribe Context Menu" src="https://github.com/user-attachments/assets/6775045c-31a0-47ed-9d55-7d52fa5c175d" />
+  <br/><em>🎯 Right-click an audio file → Transcribe Audio/Video</em>
 </p>
 
 ### 🖼️ In-Note Code Block Galleries
@@ -452,6 +495,7 @@ If you enjoy this plugin, feel free to support via:
 | 图片处理 | 18 项右键操作：裁剪、缩放、旋转、翻转、压缩等 |
 | 表格列宽调整 | 阅读模式下拖拽调整表格列宽 |
 | 自动播放循环 | 媒体自动播放循环引擎 |
+| 音频转录 | 右键音视频文件一键转录（云端 API / 本地 AI）（V17.1.7 新增） |
 
 ### 🔄 无限实例化
 
@@ -494,6 +538,48 @@ If you enjoy this plugin, feel free to support via:
 <p align="center">
   <img width="2555" height="1352" alt="表格查看器多工作簿" src="https://github.com/user-attachments/assets/15db28ab-eebb-4663-8af5-4299739777a7" />
   <br/><em>📑 一键切换工作簿——所有 Sheet 以标签形式展示</em>
+</p>
+
+### 🎙️ 音频/视频转录（V17.1.7 新增）
+
+> 右键音视频文件 → 一键转录 → 文字直接插入笔记。无需仪表盘面板——配好参数即可使用。
+
+| 特色 | 说明 |
+|------|------|
+| 🎯 **右键即转录** | 在文件浏览器中右键任意 `.mp3` / `.m4a` / `.wav` / `.mp4` / `.webm` / `.flac` / `.ogg` 文件 |
+| ☁️ **云端 API** | 支持任何 OpenAI 兼容的 `/v1/audio/transcriptions` 接口——填入 API 地址、密钥和模型名即可 |
+| 🖥️ **本地 AI** | faster-whisper-server、LocalAI、docker-whisper——任何 OpenAI 兼容 /v1/audio/transcriptions 服务 |
+| 📝 **5 种输出格式** | 纯文本、项目符号列表、待办行动项、时间戳章节、说话人分离 |
+| 🌍 **多语言跟随** | 所有界面文字跟随插件语言设置（中文/英文/AI 自定义语言） |
+| 💰 **免费选项** | 硅基流动（TeleSpeech ASR 免费额度）、Groq（Whisper 免费额度）、Cloudflare Workers AI |
+
+**推荐平台（均支持 OpenAI 兼容接口）：**
+
+*云端 API：*
+
+| 平台 | API 地址 | 说明 |
+|------|----------|------|
+| 硅基流动 | `https://api.siliconflow.cn/v1` | 🇨🇳 国内访问，TeleSpeech ASR 免费额度 |
+| Groq | `https://api.groq.com/openai/v1` | 速度快，Whisper 免费额度 |
+| Cloudflare Workers AI | `https://api.cloudflare.com/client/v4/accounts/{id}/ai/v1` | 免费额度 |
+| OpenAI | `https://api.openai.com/v1` | 标准付费 API |
+
+*本地 AI：*
+
+| 平台 | API 地址 | 说明 |
+|------|----------|------|
+| faster-whisper-server | `http://localhost:8000/v1` | Python，完全 OpenAI 兼容，推荐 |
+| LocalAI | `http://localhost:8080/v1` | Go，多后端（whisper/faster-whisper/llama-cpp） |
+| docker-whisper | `http://localhost:9000` | Docker 一键部署，含说话人分离 |
+
+<p align="center">
+  <img width="1105" height="1003" alt="音频转录设置界面" src="https://github.com/user-attachments/assets/10424883-fa9d-4e98-93f6-857066158bbb" />
+  <br/><em>🎙️ 音频转录——云端 API 配置与平台推荐</em>
+</p>
+
+<p align="center">
+  <img width="442" height="462" alt="右键转录菜单" src="https://github.com/user-attachments/assets/6775045c-31a0-47ed-9d55-7d52fa5c175d" />
+  <br/><em>🎯 右键音视频文件 → 转录音频/视频</em>
 </p>
 
 ### 🖼️ 笔记内代码块画廊
