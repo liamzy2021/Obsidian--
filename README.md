@@ -9,9 +9,9 @@
 
 # Modular Theme Dashboard
 
-> A free-layout Obsidian dashboard with 25 widgets, 8 themes, 9+ file viewers, and AI-powered multi-language translation — drag, drop, and make it yours.
+> A free-layout Obsidian dashboard with 25 widgets, 8 themes, 10+ file viewers including a lightning-fast table viewer with decimal precision control and multi-sheet browsing, and AI-powered multi-language translation — drag, drop, and make it yours.
 
-**V17** — Two major updates: **PPT / PPT File Viewer** (full support for `.ppt` and `.pptx` with smart text extraction) and **Multi-Platform Weather Module** (5 providers: Amap, Open-Meteo, wttr.in, OpenWeatherMap + custom URL template). Global weather coverage, free and unlimited for most providers.
+**V17** — Three major updates: **Lightning-Fast Table Viewer** (instant open for any size spreadsheet, adjustable decimal precision, multi-sheet tab switching), **PPT / PPT File Viewer** (full support for `.ppt` and `.pptx` with smart text extraction) and **Multi-Platform Weather Module** (5 providers: Amap, Open-Meteo, wttr.in, OpenWeatherMap + custom URL template). Global weather coverage, free and unlimited for most providers.
 
 ---
 
@@ -111,7 +111,7 @@ All modules are built in — no extra downloads, no dependencies to chase. Insta
 - **Independent Config** — Each instance has its own settings, cache, and session
 - **Smart IDs** — Instances use `module#N` naming (e.g., `weather#1`, `web-preview#2`)
 
-### 📁 Built-in File Viewer (9+ Formats)
+### 📁 Built-in File Viewer (10+ Formats)
 
 Open files directly in the dashboard — no need to leave Obsidian:
 
@@ -125,6 +125,28 @@ Open files directly in the dashboard — no need to leave Obsidian:
 | Video | `.mp4`, `.webm` |
 
 Toggle each format on/off in Settings. Disabled formats fall back to your system default app.
+
+### 📊 Lightning-Fast Table Viewer (New in V17.1.6)
+
+> Open any `.xlsx` / `.xls` file instantly — from small tables to 100,000-row monster spreadsheets, it renders faster than any desktop spreadsheet editor.
+
+| Feature | Detail |
+|---------|--------|
+| ⚡ **Instant Open** | No loading bar, no wait — renders in milliseconds regardless of file size |
+| 🔢 **Adjustable Decimals** | One-click `− / +` stepper to set decimal precision (0-10), or toggle "Auto" for raw values. No more eye-straining `0.093408691346` |
+| 📑 **Multi-Sheet Tabs** | All worksheet tabs listed at the top — click any tab to switch sheets instantly |
+| 📏 **Smart Columns** | Column widths auto-fit content, with manual drag-to-resize handles on every column |
+| 🌍 **Multi-Language** | Toolbar labels follow your plugin language setting (Chinese / English / AI-custom) |
+
+<p align="center">
+  <img width="2560" height="1379" alt="Table Viewer Overview" src="https://github.com/user-attachments/assets/f27906f8-3bcc-456a-bcc6-bc274ba91742" />
+  <br/><em>📊 Table Viewer — decimal precision control and multi-sheet tabs</em>
+</p>
+
+<p align="center">
+  <img width="2555" height="1352" alt="Table Viewer Multi-Sheet" src="https://github.com/user-attachments/assets/15db28ab-eebb-4663-8af5-4299739777a7" />
+  <br/><em>📑 Switch between sheets with one click — all sheets listed as tabs</em>
+</p>
 
 ### 🖼️ In-Note Code Block Galleries
 
@@ -336,9 +358,9 @@ If you enjoy this plugin, feel free to support via:
 
 # 中文说明
 
-> 一款自由拖拽的 Obsidian 仪表盘插件，内置 25 个功能模块、8 款精美主题、9+ 种文件查看器，以及 AI 驱动的多语言翻译——随心摆放，你的桌面你做主。
+> 一款自由拖拽的 Obsidian 仪表盘插件，内置 25 个功能模块、8 款精美主题、10+ 种文件查看器（含秒开级表格查看器，小数精度可调、多工作簿切换），以及 AI 驱动的多语言翻译——随心摆放，你的桌面你做主。
 
-**V17** — 两大重要更新：**PPT / PPT 文件查看器**（完整支持 `.ppt` 和 `.pptx` 格式，智能文本提取）和 **天气模块多平台国际化升级**（5 大平台：高德、Open-Meteo、wttr.in、OpenWeatherMap + 自定义 URL 模板）。覆盖全球天气数据，大部分平台免费无限使用。
+**V17** — 三大重要更新：**秒开级表格查看器**（任意大小表格即点即看，速度碾压桌面级编辑器；可调小数位数，不再眼花缭乱；多工作簿标签一键切换）、**PPT / PPT 文件查看器**（完整支持 `.ppt` 和 `.pptx` 格式，智能文本提取）和 **天气模块多平台国际化升级**（5 大平台：高德、Open-Meteo、wttr.in、OpenWeatherMap + 自定义 URL 模板）。覆盖全球天气数据，大部分平台免费无限使用。
 
 ---
 
@@ -437,7 +459,7 @@ If you enjoy this plugin, feel free to support via:
 - **独立配置** — 每个实例拥有独立的设置、缓存和会话
 - **智能命名** — 实例使用 `模块名#编号` 格式（如 `天气#1`、`网页预览#2`）
 
-### 📁 内置文件查看器（9+ 种格式）
+### 📁 内置文件查看器（10+ 种格式）
 
 直接在仪表盘中打开文件，无需切换窗口：
 
@@ -451,6 +473,28 @@ If you enjoy this plugin, feel free to support via:
 | 视频 | `.mp4`、`.webm` |
 
 在设置中可按格式开关，禁用的格式自动回退到系统默认程序打开。
+
+### 📊 秒开级表格查看器（V17.1.6 新功能）
+
+> 打开任意 `.xlsx` / `.xls` 文件——小到几行表格，大到十万行巨型数据表，渲染速度碾压市面上任何表格编辑器。
+
+| 特色 | 说明 |
+|------|------|
+| ⚡ **秒开不等待** | 无加载条、不卡顿——无论文件多大，毫秒级渲染 |
+| 🔢 **自定义小数位** | 一键 `− / +` 调节小数精度（0-10 位），或切到"自动"保留原始值。告别 `0.093408691346` 这种眼花缭乱的长数字 |
+| 📑 **多工作簿标签** | 所有 Sheet 标签在顶部列出，点哪个看哪个，即时切换 |
+| 📏 **智能列宽** | 列宽按内容自适应，同时支持手动拖拽调整每列宽度 |
+| 🌍 **多语言跟随** | 工具栏文字跟随插件语言设置（中文/英文/AI 自定义语言） |
+
+<p align="center">
+  <img width="2560" height="1379" alt="表格查看器概览" src="https://github.com/user-attachments/assets/f27906f8-3bcc-456a-bcc6-bc274ba91742" />
+  <br/><em>📊 表格查看器——小数精度控制与多工作簿标签</em>
+</p>
+
+<p align="center">
+  <img width="2555" height="1352" alt="表格查看器多工作簿" src="https://github.com/user-attachments/assets/15db28ab-eebb-4663-8af5-4299739777a7" />
+  <br/><em>📑 一键切换工作簿——所有 Sheet 以标签形式展示</em>
+</p>
 
 ### 🖼️ 笔记内代码块画廊
 
